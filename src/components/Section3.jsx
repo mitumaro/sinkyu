@@ -1,7 +1,7 @@
 import React from "react";
 import Step from "./SectionComponents/Step";
 import Quest from "./SectionComponents/Quest";
-import "./index.css"; // 同じディレクトリに index.css がある場合
+import "../index.css";
 
 const Section3 = () => (
   <section className="section3">

@@ -1,10 +1,10 @@
 import React from "react";
-import "./index.css"; // 同じディレクトリに index.css がある場合
+import "../index.css"; // 同じディレクトリに index.css がある場合
 
 const Header = () => (
   <header>
     <div id="header">
-      <img className="header_logo" src="img/logo.png" alt="ロゴ" />
+      <img className="header_logo" src="../img/logo.png" alt="ロゴ" />
       <p className="header_p">TripQuest</p>
       <div id="navArea">
         <nav>

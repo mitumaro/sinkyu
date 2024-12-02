@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css"; // 同じディレクトリに index.css がある場合
+import "../index.css"; // 同じディレクトリに index.css がある場合
 
 const Section1 = () => (
   <section className="section1">
