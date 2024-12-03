@@ -1,6 +1,5 @@
 import React from "react";
 import Step from "./SectionComponents/Step";
-import Quest from "./SectionComponents/Quest";
 import "../index.css";
 
 const Section3 = () => (
@@ -39,53 +38,30 @@ const Section3 = () => (
         imgSrc="img/sumaho1.png"
         title="気になるクエストを選んでみよう！"
         description="自分の心に従うのがポイント！美味しいもの、面白いもの、刺激があるものなどどれを選ぶ？"
+        note=""
       />
       <Step
         step="step2"
         imgSrc="img/sumaho2.png"
         title="選んだクエストに挑戦しよう！"
         description="旅は道中も醍醐味の一つ！新しい発見やクエストのヒントが隠されているかも・・・"
+        note=""
       />
       <Step
         step="step3"
         imgSrc="img/sumaho3.png"
         title="選んだクエストを達成しよう！"
         description="普通では味わえない他の視点の発見！達成条件は歩数や写真、位置情報など楽しさ満載！"
+        note="※ 達成機能の使用にはサービスへの登録が  
+　必要です。"
       />
       <Step
         step="step4"
         imgSrc="img/sumaho4.png"
         title="達成したクエストを自分の思い出にしよう！"
         description="自分の旅の記録をSNSでシェア！SNSにシェアするとクエストの情報が記載されるぞ！"
-      />
-    </div>
-
-    {/* セクション 3 */}
-    <div className="section3_quests">
-      <h2>クエスト紹介</h2>
-      <Quest
-        title="鎌倉十王岩の展望"
-        questNumber="1"
-        description="今日だけあなたは戦国武将！歴史ある鎌倉の山にそびえる「十王岩」にて武士の誇りを呼び覚まし敵にその勇猛さを声に託して叫べ！"
-        imgSrc="img/kamakurajyuuouiwa.png"
-        alt="鎌倉十王岩の展望"
-        buttonText="このクエストに参加する"
-      />
-      <Quest
-        title="建長寺"
-        questNumber="2"
-        description="日本最古の禅宗寺院では、歴史ある文化が色濃く残されているらしい。特に古くから食べられていた物を探してみよう！"
-        imgSrc="img/kenntyouji.png"
-        alt="建長寺"
-        buttonText="このクエストに参加する"
-      />
-      <Quest
-        title="銭洗弁財天"
-        questNumber="3"
-        description="初夏の鎌倉、紫陽花が美しく咲き誇る季節。銭洗弁財天にある古い茶屋で旅の疲れを癒すべし。"
-        imgSrc="img/zeniaraibenzaiten.png"
-        alt="銭洗弁財天"
-        buttonText="このクエストに参加する"
+        note="※ 旅ログ機能の使用にはサービスへの登録が
+　必要です。"
       />
     </div>
   </section>
