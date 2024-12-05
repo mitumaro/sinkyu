@@ -373,6 +373,7 @@ section3
 
 .section3_intro h2:last-child{
   margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 .section3_intro h2{
@@ -496,4 +497,34 @@ section3
   line-height: 150%;
   letter-spacing: 0.5px;
 }
+
+/*============
+section4
+=============*/
+
+.section4_quests p{
+  text-align: center;
+}
+
+.section4_quests p:first-child{
+  margin-top: 60px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #20B6F1;
+}
+
+.section4_quests h2{
+  color: #00A3FF;
+  font-family: "Tamanegi Kaisho Geki FreeVer 7";
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.section4_quests p{
+  
+}
+
+
+
 

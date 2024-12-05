@@ -5,7 +5,16 @@ import "../index.css";
 const Section4 = () => (
   <section className="section4_quests">
     {/* セクション 4 */}
-    <h2>クエスト紹介</h2>
+    <p>クエスト紹介</p>
+    <h2>武士になり食歴史を知ろう</h2>
+    <p>
+      時代を作った鎌倉武士に
+      <br />
+      なりきりいつもと違う視点や発見でなりきりいつもと違う視点や発見で
+      <br />
+      歴史を感じていこう！
+    </p>
+
     <Quest
       title="鎌倉十王岩の展望"
       questNumber="1"
