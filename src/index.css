@@ -50,7 +50,7 @@ h2{
 .header_logo{
     width: 104px;
     height: 46px;
-    margin-left: 10px;
+    margin-left: 3%;
     margin-top: 8px;
 }
 
@@ -58,7 +58,7 @@ h2{
     font-size: 2.4rem;
     font-weight: bold;
     margin-top: 14px;
-    margin-left: 15px;
+    margin-left: 4%;
 }
 
 /*============
@@ -204,7 +204,7 @@ nav {
     color: #4388FF;
     position: absolute;
     top: 265px;
-    left: 12px;
+    left: 3%;
   }
 
   .h1_2{
@@ -213,7 +213,7 @@ nav {
     color: #FFF;
     position: absolute;
     top: 300px;
-    left: -28px;
+    left: -7%;
   }
 
   .h1_3{
@@ -222,7 +222,7 @@ nav {
     color: #FFF;
     position: absolute;
     top: 377px;
-    left: 16px;
+    left: 4%;
   }
 
   .section1_img1{
@@ -230,7 +230,7 @@ nav {
     height: 26px;
     transform: rotate( 350deg );
     position: absolute;
-    left: 16px;
+    left: 4%;
     top: 428px;
   }
 
@@ -299,7 +299,7 @@ nav {
     width: 30%;
     position: absolute;
     top: 497px;
-    left: 37px;
+    left: 9%;
 }
 
 .section1_img3{
@@ -496,6 +496,7 @@ section3
   font-size: 1rem;
   line-height: 150%;
   letter-spacing: 0.5px;
+  opacity: 50%;
 }
 
 /*============
@@ -507,11 +508,14 @@ section4
 }
 
 .section4_quests p:first-child{
-  margin-top: 60px;
   font-size: 1.6rem;
   font-weight: 500;
   letter-spacing: 1px;
   color: #20B6F1;
+}
+
+.questsIntroduction{
+  margin-top: 60px;
 }
 
 .section4_quests h2{
@@ -522,9 +526,325 @@ section4
 }
 
 .section4_quests p{
-  
+  font-size: 1.6rem;
+  line-height: 28.8px;
+  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 
+.section4_quests h3{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
 
+.rood1{
+  position: relative;
+  padding-bottom: 191px;
+  margin-top: 40px;
+  background-color: #F5E8C7;
+  border-top-left-radius: 183px 67px;
+  border-top-right-radius: 183px 67px;
+
+}
+
+.rood1 img:first-child,.rood1 img:nth-child(2),.rood1 img:nth-child(3),.rood1 img:nth-child(4){
+  position: absolute;
+}
+
+
+.rood1 img:first-child{
+  width: 74%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+}
+
+.rood1 img:nth-child(2){
+  width: 80%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.rood1 img:nth-child(3){
+  width: 27%;
+  z-index: 8;
+  left: 9%;
+  top: 60px;
+}
+
+.rood1 img:nth-child(4){
+  width: 25%;
+  z-index: 8;
+  left: 68%;
+  top: 93px;
+}
+
+.quest{
+  background-color: #F5E8C7;
+  padding-bottom: 191px;
+}
+
+.questImg{
+  position: absolute;
+}
+
+.questContents{
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 191px;
+  background-color: #FFF;
+  padding-bottom: 191px;
+}
+
+.questTitle{
+  display: flex;
+  position: relative;
+  bottom: 23px;
+}
+
+.mapPin{
+  width: 17%;
+}
+
+.quest .questTitle h2{
+  margin: auto 0;
+}
+
+.section4_quests .questNumber{
+  margin: 0 0 0 8%;
+  text-align: left;
+}
+
+
+.section4_quests .questStory{
+  width: 64%;
+  text-align: left;
+  margin: 20px auto 0 auto;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 21px;
+  letter-spacing: 1px;
+}
+
+.questContents_button{
+  width: 58%;
+  height: 4.4rem;
+  display: flex;
+  border: none;
+  justify-content: start;
+  background-color: #FF4C00;
+  margin: 20px auto 40px auto;
+}
+
+.quest .questContents_button .questContents_p{
+  font-weight: bolder;
+  margin: auto 2% auto 6%;
+  font-size: 1.2rem;
+  color: #FFF;
+  font-weight: 900;
+}
+
+.questContents_arrow{
+position: relative;
+display: inline-block;
+padding: 0 0 0 16px;
+color: #000;
+vertical-align: middle;
+text-decoration: none;
+font-size: 15px;
+z-index: 10;
+}
+.questContents_arrow::before,
+.questContents_arrow::after{
+position: absolute;
+top: 22px;
+bottom: 0;
+left: 0;
+margin: auto;
+content: "";
+vertical-align: middle;
+z-index: 10;
+}
+
+.questContents_arrow::before{
+width: 14px;
+height: 2px;
+background: #fff;
+}
+
+.questContents_arrow::after{
+  left: 5px;
+width: 6px;
+height: 6px;
+border-top: 2px solid #fff;
+border-right: 2px solid #FFF;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+.questContents .rood2{
+  background-color: #F5E8C7;
+}
+
+.questContents .store .store_p {
+  position: relative;
+  width: 60%;
+  padding: 3px 0;
+  background-color: #FF4C00;
+  color: #FFF;
+  margin: 0 auto;
+  bottom: 18px;
+  font-weight: 900;
+}
+
+.store{
+  width: 68%;
+  margin: 0 auto;
+  background-color: #F5E8C7;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+.storeIntroduction p{
+  position: relative;
+}
+
+.storeIntroduction p:first-child{
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 21px;
+  margin-bottom: 20px;
+  color: #000;
+  bottom: 13px;
+}
+
+.storeIntroduction p:nth-child(2){
+  font-size: 1.4rem;
+  line-height: 21px;
+  color: #000;
+  bottom: 13px;
+  margin-bottom: 17px;
+}
+
+.storeIntroduction_button{
+  background-color: #FFF;
+  width: 77%;
+  height: 34px;
+  display: flex;
+  border: solid 1px;
+  justify-content: start;
+  margin:  0  auto;
+  border-color: #FF4C00;
+}
+
+.quest .storeIntroduction_button .storeIntroduction_p{
+  font-weight: bolder;
+  color: #FF4C00;
+  font-weight: 900;
+  margin: 0;
+  margin-top: 18px;
+  margin-left: 6%;
+  font-size: 1.4rem;
+}
+
+.storeIntroduction_arrow{
+position: relative;
+display: inline-block;
+padding: 0 0 0 16px;
+color: #000;
+vertical-align: middle;
+text-decoration: none;
+font-size: 15px;
+z-index: 10;
+}
+.storeIntroduction_arrow::before,
+.storeIntroduction_arrow::after{
+position: absolute;
+top: 16px;
+bottom: 0;
+left: 0;
+margin: auto;
+content: "";
+vertical-align: middle;
+z-index: 10;
+}
+
+.storeIntroduction_arrow::before{
+  left: 40%;
+width: 14px;
+height: 2px;
+background: #FF4C00;
+}
+
+.storeIntroduction_arrow::after{
+  left: 80%;
+width: 6px;
+height: 6px;
+border-top: 2px solid #FF4C00;
+border-right: 2px solid #FF4C00;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+}
+
+.rood2{
+  position: relative;
+}
+
+.rood2 img:nth-child(2){
+  width: 38%;
+  position: absolute;
+  top: 30px;
+}
+
+.rood2 img:last-child{
+  position: absolute;
+  width: 27%;
+  top: 110px;
+  left: 70%;
+}
+
+.store:nth-last-child(2),.store:last-child{
+  display: none;
+}
+
+.rood3{
+  background-color: #F5E8C7;
+  position: relative;
+}
+
+.rood3 img:nth-child(2){
+  width: 31%;
+  position: absolute;
+  top: 10px;
+  left: -8%;
+}
+
+.rood3 img:last-child{
+  width: 42%;
+  position: absolute;
+  top: 35px;
+  left: 55%;
+}
+
+.rood4{
+  background-color: #F5E8C7;
+  position: relative;
+}
+
+.rood4 img:nth-child(2){
+  
+}
+
+.rood4 img:last-child{
+  
+}
+
+.questContents:last-child{
+  padding-bottom: 0;
+}
 
