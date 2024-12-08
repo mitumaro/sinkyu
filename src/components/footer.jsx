@@ -9,14 +9,16 @@ const Footer = () => (
       <p>鎌倉について</p>
       <p>TripQuestとは？</p>
       <p>クエスト紹介</p>
-      <p>
-        ・クエスト１
-        <br />
-        ・クエスト２
-        <br />
-        ・クエスト３
-      </p>
-      <button className="footer__button">一人旅を体験する</button>
+      <div className="footer_div">
+        <p>・クエスト１</p>
+        <p>・クエスト２</p>
+        <p>・クエスト３</p>
+      </div>
+
+      <button className="footer__button">
+        <p className="footer_p">一人旅を体験する</p>
+        <a className="footer_arrow"></a>
+      </button>
     </div>
   </footer>
 );

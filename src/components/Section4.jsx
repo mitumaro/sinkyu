@@ -22,6 +22,7 @@ const Section4 = () => (
     </div>
 
     <Quest
+      idName="Quest1"
       title="鎌倉十王岩の展望"
       questNumber="1"
       questTitle={
@@ -68,6 +69,7 @@ const Section4 = () => (
       img3Alt="あんみつ"
     />
     <Quest
+      idName="Quest2"
       title="建長寺"
       questNumber="2"
       questTitle={
@@ -98,6 +100,7 @@ const Section4 = () => (
       img3Alt="紫陽花"
     />
     <Quest
+      idName="Quest3"
       title="銭洗弁財天"
       questNumber="3"
       questTitle={

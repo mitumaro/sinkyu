@@ -2,7 +2,7 @@ import React from "react";
 import "../index.css";
 
 const Section2 = () => (
-  <section className="section2">
+  <section id="section2" className="section2">
     <div className="section2_div1">
       <h2>
         歴史とグルメな町

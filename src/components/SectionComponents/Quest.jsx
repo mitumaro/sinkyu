@@ -1,6 +1,7 @@
 import React from "react";
 
 const Quest = ({
+  idName,
   title,
   questNumber,
   questTitle,
@@ -20,7 +21,7 @@ const Quest = ({
   img3Alt,
   roodName,
 }) => (
-  <div className="quest">
+  <div id={idName} className="quest">
     <img className="questImg" src={imgSrc} alt={alt} />
     <div className="questContents">
       <div className="questTitle">

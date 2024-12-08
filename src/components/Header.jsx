@@ -1,60 +1,62 @@
-import React from "react";
-import "../index.css"; // 同じディレクトリに index.css がある場合
+import React, { useState } from "react";
+import "../index.css"; // Ensure the CSS file path is correct.
 
-const Header = () => (
-  <header>
-    <div id="header">
-      <img className="header_logo" src="../img/logo.png" alt="ロゴ" />
-      <p className="header_p">TripQuest</p>
-      <div id="navArea">
-        <nav>
-          <div className="inner">
-            <ul>
-              <li>
-                <a href="#">topへ</a>
-              </li>
-              <li>
-                <a href="#container1">日本電子専門学校Webデザイン科の特徴</a>
-              </li>
-              <li>
-                <a href="#container_2">何故とは？</a>
-              </li>
-              <li>
-                <a href="#container_3">クライアントからの依頼</a>
-              </li>
-              <li>
-                <a href="#container_4">一枚企画書</a>
-              </li>
-              <li>
-                <a href="#container_5">企画書</a>
-              </li>
-              <li>
-                <a href="#container_6">ワイヤーフレーム</a>
-              </li>
-              <li>
-                <a href="#container_7">モックアップ</a>
-              </li>
-              <li>
-                <a href="#container_8">コーディング</a>
-              </li>
-              <li>
-                <a href="#container_9">collegeNight</a>
-              </li>
-              <li>
-                <a href="#container_10">１日一回自己プロフィール</a>
-              </li>
-            </ul>
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Toggle the menu open/close
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Close the menu
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <header>
+      <div id="header">
+        <img className="header_logo" src="../img/logo.png" alt="ロゴ" />
+        <p className="header_p">TripQuest</p>
+        <div id="navArea" className={isOpen ? "open" : ""}>
+          <nav>
+            <div className="inner">
+              <ul>
+                <li>
+                  <a href="#">top</a>
+                </li>
+                <li>
+                  <a href="#section2">鎌倉について</a>
+                </li>
+                <li>
+                  <a href="#section3">TripQuestとは？</a>
+                </li>
+                <li>
+                  <a href="#section4">クエスト紹介</a>
+                </li>
+                <li>
+                  <a href="#Quest1">クエスト１</a>
+                </li>
+                <li>
+                  <a href="#Quest2">クエスト２</a>
+                </li>
+                <li>
+                  <a href="#Quest3">クエスト３</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div className="toggle_btn" onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-        </nav>
-        <div className="toggle_btn">
-          <span></span>
-          <span></span>
-          <span></span>
+          {isOpen && <div id="mask" onClick={closeMenu}></div>}
         </div>
-        <div id="mask"></div>
       </div>
-    </div>
-  </header>
-);
+    </header>
+  );
+};
 
 export default Header;
