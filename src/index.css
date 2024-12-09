@@ -72,7 +72,7 @@ nav {
     display: block;
     position: fixed;
     top: 0;
-    right: -393px;
+    right: -100%;
     bottom: 0;
     width: 393px;
     background-image: url(../img/tyousouji.png);
@@ -81,15 +81,15 @@ nav {
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     transform: translateX(100%); /* 初期位置 */
-    transition: transform 0.5s ease-in-out;
+    transition:  0.7s ease-in-out;
     z-index: 10;
   }
   .open nav {
-    left: 0;
+    right: 0;
     transform: translateX(0); /* 開いた状態 */
   }
   nav .inner {
-    padding: 25px;
+    padding-left: 40px;
   }
   nav .inner ul {
     list-style: none;
@@ -98,21 +98,96 @@ nav {
   }
   nav .inner ul li {
     position: relative;
-    margin: 20px 0;
-    border-bottom: 1px solid #333;
+    margin: 40px 0;
     z-index: 12;
   }
   nav .inner ul li a {
     display: block;
     color: #fff;
-    font-size: 14px;
-    padding: 1em;
+    font-size: 2.4rem;
     text-decoration: none;
-    transition-duration: 0.2s;
+    font-weight: 500;
   }
+
+  nav .inner ul li:first-child{
+    margin-top: 100px;
+  }
+
+  nav .inner ul li:nth-child(4){
+    margin-bottom: 15px;
+  }
+
+  nav .inner ul li:nth-child(5),nav .inner ul li:nth-child(6),nav .inner ul li:nth-child(7){
+    margin: 15px 0;
+    margin-left: 20px;
+  }
+
+  .nav_button{
+    background-color: #FFF;
+    width: 44.2%;
+    height: 44px;
+    display: flex;
+    border: none;
+    justify-content: start;
+    margin:  40px  auto  0 auto;
+    background-color: #FF4C00;
+  }
+  
+  nav .nav_p{
+    font-weight: bolder;
+    color: #fff;
+    font-weight: 900;
+    margin: 0;
+    margin-top: 12px;
+    margin-left: 10%;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+  }
+  
+  .nav_arrow{
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 16px;
+  color: #000;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 15px;
+  z-index: 6;
+  }
+  .nav_arrow::before,
+  .nav_arrow::after{
+  position: absolute;
+  top: 23px;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+  z-index: 6;
+  }
+  
+  .nav_arrow::before{
+    left: 40%;
+  width: 14px;
+  height: 2px;
+  background: #FFF;
+  }
+  
+  .nav_arrow::after{
+    left: 80%;
+  width: 6px;
+  height: 6px;
+  border-top: 2px solid #FFF;
+  border-right: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  }
+
   nav .inner ul li a:hover {
     background: #e4e4e4;
   }
+
+
   /*============
   .toggle_btn
   =============*/
@@ -123,7 +198,6 @@ nav {
     right: 12px;
     width: 30px;
     height: 30px;
-    transition: all .5s;
     cursor: pointer;
     z-index: 11;
   }
@@ -136,7 +210,7 @@ nav {
     background-color: #FF4C00;
 ;
     border-radius: 4px;
-    transition: all .5s;
+    transition: all 1s;
   }
   .toggle_btn span:nth-child(1) {
     top: 4px;
@@ -161,10 +235,12 @@ nav {
     -webkit-transform: translateY(-10px) rotate(315deg);
     transform: translateY(-10px) rotate(315deg);
   }
+
+
   /*============
   #mask
   =============*/
-  #mask {
+  /*#mask {
     display: none;
     transition: all .5s;
   }
@@ -175,10 +251,10 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2); /* オーバーレイ */
+    background: rgba(0, 0, 0, 0.2); 
     z-index: 11;
     cursor: pointer;
-  }
+  }*/
 
   /*========
     メインsection
@@ -302,8 +378,7 @@ nav {
 }
 
 .section1_img3{
-    width: 100%;
-
+    width: 393px;
     position: absolute;
     top: 578px;
 }
@@ -386,14 +461,25 @@ section3
     padding-bottom: 20px;
 }
 
-.section3_images{
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-around;
+/* 画像全体をラップするコンテナ */
+.section3_images {
+  padding: 20px 0;
+  display: flex;
+  overflow: hidden; /* コンテナ外の画像を非表示に */
+  width: 100%;
+  position: relative;
 }
 
-.section3_images img{
-    width: 30%;
+.section3_images_inner {
+  display: flex;
+  width: max-content; /* 子要素全体を収める */
+}
+
+.section3_images img {
+  flex-shrink: 0; /* 画像が縮小しないようにする */
+  width: 30%; /* 各画像の幅 */
+  object-fit: cover; /* 比率を保ったまま表示 */
+  margin-right: 20px; /* 画像間のスペース */
 }
 
 .section3_div1_h2_3{
@@ -954,3 +1040,5 @@ transform: rotate(45deg);
 @media screen and (max-width: 959px) {
 
 }
+
+
