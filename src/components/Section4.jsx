@@ -3,7 +3,7 @@ import Quest from "./SectionComponents/Quest";
 import "../index.css";
 
 const Section4 = () => (
-  <section className="section4_quests">
+  <section id="section4" className="section4_quests">
     {/* セクション 4 */}
     <p className="questsIntroduction">クエスト紹介</p>
     <h2>武士になり食歴史を知ろう</h2>

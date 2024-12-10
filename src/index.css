@@ -260,20 +260,51 @@ nav {
     メインsection
   =========*/
 
-  .section1{
+  .section1 {
     position: relative;
   }
   
-  .section1_FV_img{
-    display: block;
+  .rotating-h1 {
+    position: relative;
   }
-
-  .h1_1,.h1_2,.h1_3{
+  
+  .rotating-h1 .h1_1,
+  .rotating-h1 .h1_2,
+  .rotating-h1 .h1_3 {
     font-family: "Tamanegi Kaisho Geki FreeVer 7";
-    transform: rotate( 350deg );
+    transform: rotate(350deg);
+    opacity: 0; /* 初期状態で透明 */
+    animation: rotating-h1 1.2s ease-out forwards;
   }
-
-  .h1_1{
+  
+  .rotating-h1 .h1_1 {
+    animation-delay: 0s; /* 0秒後にアニメーション開始 */
+  }
+  
+  .rotating-h1 .h1_2 {
+    animation-delay: 0.6s; /* 0.3秒後にアニメーション開始 */
+  }
+  
+  .rotating-h1 .h1_3 {
+    animation-delay: 1.2s; /* 0.6秒後にアニメーション開始 */
+  }
+  
+  @keyframes rotating-h1 {
+    0% {
+      transform: rotate(0deg) scale(6) translateY(20); /* 初期状態 */
+      opacity: 0; /* 透明 */
+    }
+    /**50% {
+      transform: rotate(720deg) scale(2);
+      opacity: 0.5; 
+    }**/
+    100% {
+      transform: rotate(1430deg) scale(1) translateY(0); /* 完全に回転 */
+      opacity: 1; /* 完全に表示 */
+    }
+  }
+  
+  .h1_1 {
     z-index: 3;
     font-size: 3.2rem;
     color: #4388FF;
@@ -281,8 +312,8 @@ nav {
     top: 265px;
     left: 3%;
   }
-
-  .h1_2{
+  
+  .h1_2 {
     z-index: 3;
     font-size: 6.4rem;
     color: #FFF;
@@ -290,8 +321,8 @@ nav {
     top: 300px;
     left: -7%;
   }
-
-  .h1_3{
+  
+  .h1_3 {
     z-index: 3;
     font-size: 2.4rem;
     color: #FFF;
@@ -299,17 +330,17 @@ nav {
     top: 377px;
     left: 4%;
   }
-
-  .section1_img1{
+  
+  .section1_img1 {
     width: 86px;
     height: 26px;
-    transform: rotate( 350deg );
+    transform: rotate(350deg);
     position: absolute;
     left: 4%;
     top: 428px;
   }
-
-  .section1_button{
+  
+  .section1_button {
     width: 17.3rem;
     height: 4.4rem;
     display: flex;
@@ -319,10 +350,9 @@ nav {
     position: absolute;
     right: 3%;
     top: 434px;
-    
   }
-
-  .section1_button_p{
+  
+  .section1_button_p {
     font-weight: bolder;
     margin-top: 1.1rem;
     margin-left: 1.6rem;
@@ -330,59 +360,76 @@ nav {
     padding-right: 10px;
     color: #FFF;
   }
-
-  .section1_button_a_arrow{
-	position: relative;
-	display: inline-block;
-	padding: 0 0 0 16px;
-	color: #000;
-	vertical-align: middle;
-	text-decoration: none;
-	font-size: 15px;
-}
-.section1_button_a_arrow::before,
-.section1_button_a_arrow::after{
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	content: "";
-	vertical-align: middle;
-}
-
-.section1_button_a_arrow::before{
+  
+  .section1_button_a_arrow {
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 16px;
+    color: #000;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  
+  .section1_button_a_arrow::before,
+  .section1_button_a_arrow::after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    content: "";
+    vertical-align: middle;
+  }
+  
+  .section1_button_a_arrow::before {
     top: 22px;
     left: 3px;
-	width: 15px;
-	height: 2px;
-	background: #FFF;
-}
-
-.section1_button_a_arrow::after{
+    width: 15px;
+    height: 2px;
+    background: #FFF;
+  }
+  
+  .section1_button_a_arrow::after {
     top: 22px;
     left: 10px;
-	width: 6px;
-	height: 6px;
-	border-top: 2px solid #FFF;
-	border-right: 2px solid #FFF;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    transform: rotate(45deg);
+  }
+
+  .section1_img2, .section1_img3 {
+    opacity: 0;
+    animation: section1_img 0.5s ease-out forwards;
 }
 
-.section1_img2{
+.section1_img2 {
+    animation-delay: 2.6s;
     width: 30%;
     position: absolute;
     top: 497px;
     left: 9%;
 }
 
-.section1_img3{
+.section1_img3 {
+    animation-delay: 3s;
     width: 393px;
     position: absolute;
     top: 578px;
 }
 
+@keyframes section1_img {
+    0% {
+        transform: translateY(100px); /* 初期位置を下にずらす */
+        opacity: 0; /* 透明 */
+    }
+    100% {
+        transform: translateY(0); /* 元の位置に戻す */
+        opacity: 1; /* 完全に表示 */
+    }
+}
 /*======
 section2
 =======*/

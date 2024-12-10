@@ -32,7 +32,7 @@ const Section3 = () => {
   }, []);
 
   return (
-    <section id="section4" className="section3">
+    <section id="section3" className="section3">
       {/* セクション 1 */}
       <div className="section3_intro">
         <h2>
