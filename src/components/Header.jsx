@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../index.css"; // Ensure the CSS file path is correct.
 
 const Header = () => {
