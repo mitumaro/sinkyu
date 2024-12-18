@@ -8,8 +8,8 @@ import "./index.css";
 
 const App = () => (
   <>
-    <Header />
     <div className="contents">
+      <Header />
       <Section1 />
       <Section2 />
       <Section3 />

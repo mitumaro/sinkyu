@@ -2,6 +2,10 @@ import { useEffect } from "react";
 import "../index.css";
 
 const Footer = () => {
+  const handleClick = () => {
+    window.location.href = "https://trip-quest.jp/";
+  };
+
   useEffect(() => {
     const handleAnchorClick = (event) => {
       const targetId = event.target.getAttribute("href");
@@ -44,7 +48,7 @@ const Footer = () => {
           <p href="#Quest3">・クエスト３</p>
         </div>
 
-        <button className="footer__button">
+        <button onClick={handleClick} className="footer__button">
           <p className="footer_p">一人旅を体験する</p>
           <a className="footer_arrow"></a>
         </button>

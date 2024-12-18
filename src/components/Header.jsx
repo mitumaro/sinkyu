@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import "../index.css"; // Ensure the CSS file path is correct.
 
 const Header = () => {
+  const handleClick = () => {
+    window.location.href = "https://trip-quest.jp/";
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   // Toggle the menu open/close
@@ -82,7 +86,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <button className="nav_button">
+          <button onClick={handleClick} className="nav_button">
             <p className="nav_p">一人旅を体験する</p>
             <a className="nav_arrow"></a>
           </button>
