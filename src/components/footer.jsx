@@ -1,26 +1,56 @@
-import React from "react";
+import { useEffect } from "react";
 import "../index.css";
 
-const Footer = () => (
-  <footer className="footer">
-    <h2 className="footer__title">TripQuest</h2>
-    <div className="footer__links">
-      <p>TOP</p>
-      <p>鎌倉について</p>
-      <p>TripQuestとは？</p>
-      <p>クエスト紹介</p>
-      <div className="footer_div">
-        <p>・クエスト１</p>
-        <p>・クエスト２</p>
-        <p>・クエスト３</p>
-      </div>
+const Footer = () => {
+  useEffect(() => {
+    const handleAnchorClick = (event) => {
+      const targetId = event.target.getAttribute("href");
+      if (targetId && targetId.startsWith("#")) {
+        event.preventDefault();
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const offset = 150; // スクロール位置を調整するオフセット（px）
+          const position = targetElement.offsetTop - offset; // 移動先の位置にオフセットを追加
+          window.scrollTo({
+            top: position,
+            behavior: "smooth",
+          });
+        }
+      }
+    };
 
-      <button className="footer__button">
-        <p className="footer_p">一人旅を体験する</p>
-        <a className="footer_arrow"></a>
-      </button>
-    </div>
-  </footer>
-);
+    const footerLinks = document.querySelectorAll(".footer__links p");
+    footerLinks.forEach((link) => {
+      link.addEventListener("click", handleAnchorClick);
+    });
+    return () => {
+      footerLinks.forEach((link) => {
+        link.removeEventListener("click", handleAnchorClick);
+      });
+    };
+  }, []);
+
+  return (
+    <footer className="footer">
+      <h2 className="footer__title">TripQuest</h2>
+      <div className="footer__links">
+        <p href="#header">TOP</p>
+        <p href="#section2">鎌倉について</p>
+        <p href="#section3">TripQuestとは？</p>
+        <p href="#section4">クエスト紹介</p>
+        <div className="footer_div">
+          <p href="#Quest1">・クエスト１</p>
+          <p href="#Quest2">・クエスト２</p>
+          <p href="#Quest3">・クエスト３</p>
+        </div>
+
+        <button className="footer__button">
+          <p className="footer_p">一人旅を体験する</p>
+          <a className="footer_arrow"></a>
+        </button>
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

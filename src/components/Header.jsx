@@ -22,7 +22,8 @@ const Header = () => {
       if (href && href.startsWith("#")) {
         const target = document.querySelector(href);
         if (target) {
-          const position = target.offsetTop; // 移動先の位置を取得
+          const offset = 150; // スクロール位置を調整するオフセット（px）
+          const position = target.offsetTop - offset; // 移動先の位置にオフセットを追加
           window.scrollTo({
             top: position,
             behavior: "smooth", // スムーススクロール
@@ -65,13 +66,19 @@ const Header = () => {
                 <a href="#section4">クエスト紹介</a>
               </li>
               <li>
-                <a href="#Quest1">・クエスト１</a>
+                <a className="QuestChild" href="#Quest1">
+                  ・クエスト１
+                </a>
               </li>
               <li>
-                <a href="#Quest2">・クエスト２</a>
+                <a className="QuestChild" href="#Quest2">
+                  ・クエスト２
+                </a>
               </li>
               <li>
-                <a href="#Quest3">・クエスト３</a>
+                <a className="QuestChild" href="#Quest3">
+                  ・クエスト３
+                </a>
               </li>
             </ul>
           </div>

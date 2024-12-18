@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Step from "./SectionComponents/Step";
 import "../index.css";
+import MyComponent from "./SectionComponents/MyComponent.jsx";
 
 const Section3 = () => {
   const scrollRef = useRef(null);
@@ -14,7 +15,7 @@ const Section3 = () => {
       let scrollPosition = 0;
 
       const animateScroll = () => {
-        scrollPosition += 0.5; // スクロール速度を調整
+        scrollPosition += 0.8; // スクロール速度を調整
         scrollContainer.scrollLeft = scrollPosition;
 
         // スクロール位置がクローン部分に達したらリセット
@@ -69,37 +70,115 @@ const Section3 = () => {
       </div>
 
       {/* セクション 2 */}
+      <MyComponent />
       <div className="section3_steps">
-        <Step
-          step="step1"
-          imgSrc="img/sumaho1.png"
-          title="気になるクエストを選んでみよう！"
-          description="自分の心に従うのがポイント！美味しいもの、面白いもの、刺激があるものなどどれを選ぶ？"
-          note=""
-        />
-        <Step
-          step="step2"
-          imgSrc="img/sumaho2.png"
-          title="選んだクエストに挑戦しよう！"
-          description="旅は道中も醍醐味の一つ！新しい発見やクエストのヒントが隠されているかも・・・"
-          note=""
-        />
-        <Step
-          step="step3"
-          imgSrc="img/sumaho3.png"
-          title="選んだクエストを達成しよう！"
-          description="普通では味わえない他の視点の発見！達成条件は歩数や写真、位置情報など楽しさ満載！"
-          note="※ 達成機能の使用にはサービスへの登録が  
+        <div className="step_sh">
+          <div className="figure_section3_steps">
+            <ul className="section3_steps_imgs">
+              <li className="section3_steps_li">
+                <img
+                  className="section3_steps_img"
+                  src="img/sumaho1.png"
+                  alt=""
+                />
+              </li>
+              <li className="section3_steps_li">
+                <img
+                  className="section3_steps_img"
+                  src="img/sumaho2.png"
+                  alt=""
+                />
+              </li>
+              <li className="section3_steps_li">
+                <img
+                  className="section3_steps_img"
+                  src="img/sumaho3.png"
+                  alt=""
+                />
+              </li>
+              <li className="section3_steps_li">
+                <img
+                  className="section3_steps_img"
+                  src="img/sumaho4.png"
+                  alt=""
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="step_text">
+          <Step
+            step="step1"
+            title="気になるクエストを選んでみよう！"
+            description={
+              <>
+                自分の心に従うのがポイント！
+                <br />
+                美味しいもの、面白いもの、
+                <br />
+                刺激があるもの、など
+                <br />
+                どれを選ぶ？
+              </>
+            }
+            note=""
+          />
+          <Step
+            step="step2"
+            title="選んだクエストに挑戦しよう！"
+            description={
+              <>
+                旅は道中も醍醐味の一つ！
+                <br />
+                新しい発見や
+                <br />
+                クエストのヒントが
+                <br />
+                隠されているかも・・・
+              </>
+            }
+            note=""
+          />
+          <Step
+            step="step3"
+            title="選んだクエストを達成しよう！"
+            description={
+              <>
+                普通では味わえない
+                <br />
+                他の視点の発見！
+                <br />
+                達成条件は歩数や写真、
+                <br />
+                位置情報など楽しさ満載！
+              </>
+            }
+            note="※ 達成機能の使用にはサービスへの登録が  
   必要です。"
-        />
-        <Step
-          step="step4"
-          imgSrc="img/sumaho4.png"
-          title="達成したクエストを自分の思い出にしよう！"
-          description="自分の旅の記録をSNSでシェア！SNSにシェアするとクエストの情報が記載されるぞ！"
-          note="※ 旅ログ機能の使用にはサービスへの登録が
+          />
+          <Step
+            step="step4"
+            title={
+              <>
+                達成したクエストを
+                <br />
+                自分の思い出にしよう！
+              </>
+            }
+            description={
+              <>
+                自分の旅の記録をSNSでシェア！
+                <br />
+                SNSにシェアするとクエストの
+                <br />
+                情報が記載されるぞ！
+              </>
+            }
+            note="※ 旅ログ機能の使用にはサービスへの登録が
   必要です。"
-        />
+          />
+        </div>
       </div>
     </section>
   );

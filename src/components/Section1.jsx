@@ -1,4 +1,3 @@
-import React from "react";
 import "../index.css"; // 同じディレクトリに index.css がある場合
 
 const Section1 = () => (

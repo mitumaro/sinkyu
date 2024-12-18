@@ -44,6 +44,10 @@ h2{
     margin-bottom: 20px;
 }
 
+/*=======
+header
+========*/
+
 #header{
     width: 100%;
     height: 60px;
@@ -63,6 +67,10 @@ h2{
     font-weight: bold;
     margin-top: 14px;
     margin-left: 4%;
+}
+
+#header .QuestChild{
+  font-size: 2rem;
 }
 
 /*============
@@ -129,7 +137,7 @@ nav {
     display: flex;
     border: none;
     justify-content: start;
-    margin:  40px  auto  0 auto;
+    margin:  100px  auto  0 auto;
     background-color: #FF4C00;
   }
   
@@ -291,7 +299,7 @@ nav {
   
   @keyframes rotating-h1 {
     0% {
-      transform: rotate(0deg) scale(6) translateY(20); /* 初期状態 */
+      transform: rotate(0deg) scale(6) translateY(20px); /* 初期状態 */
       opacity: 0; /* 透明 */
     }
     /**50% {
@@ -406,7 +414,7 @@ nav {
 }
 
 .section1_img2 {
-    animation-delay: 2.6s;
+    animation-delay: 3s;
     width: 30%;
     position: absolute;
     top: 497px;
@@ -414,7 +422,7 @@ nav {
 }
 
 .section1_img3 {
-    animation-delay: 3s;
+    animation-delay: 2.6s;
     width: 393px;
     position: absolute;
     top: 578px;
@@ -529,94 +537,142 @@ section3
   margin-right: 20px; /* 画像間のスペース */
 }
 
-.section3_div1_h2_3{
-    margin: 20px 0 40px 0;
-    color: #4388FF;
+.step_sh{
+  position: sticky;
+  margin-top: 60px;
+  top: calc(50vh - 99.275px);
+  width: 98.79px;
+  height: 198.55px;
+  z-index: 12;
 }
 
-.section3_div2 div{
-    padding: 40px 0 20px 0;
+.figure_section3_steps {
+  width: 98.79px;
+  height: 198.55px;
+  position: relative;
+  overflow: hidden;
+  z-index: 11;
 }
 
-.section3_div2{
-    border-radius: 45px;
-    background-color: #EAEAEA;
+.section3_steps_imgs {
+  display: flex;
+  position: relative;
+  top: 0;
+  left: 0px;
+  list-style: none;
+  transition: left 0.3s ease;
+  width: 98.79px;
+  height: 198.55px;
+  padding: 0;
+  margin: 0;
 }
 
-.section3_div2 p{
-    font-size: 14px;
-    line-height: 21px;
-    letter-spacing: 1px;
+.section3_steps_imgs {
+  position: relative; /* これがないとleftが反映されない */
 }
 
-.section3_div2 p:first-child{
-    font-weight: bolder;
+.section3_steps_li {
+  flex: 0 0 100%; /* 各画像を横幅いっぱいに配置 */
 }
 
-.section3_div2 p:last-child{
-    font-weight: 500;
+.section3_steps_img {
+  width: 100%; /* 必要に応じてサイズを調整 */
+  height: auto;
 }
 
-.step:first-child{
+.step {
+  margin-left: 12%;
+}
+
+.step_sh{
+  margin-left: 10%;
+}
+
+
+
+.step:first-child {
   padding-bottom: 40px;
 }
 
-.step:last-child{
+.step:last-child {
   padding-top: 40px;
 }
 
-.step:nth-child(2),.step:nth-child(3){
+.step:nth-child(2),
+.step:nth-child(3) {
   padding: 40px 0;
 }
 
-.section3_steps{
+.section3_steps {
   padding: 40px 0;
   border-radius: 45px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
+  position: relative; /* 親要素にrelativeを設定 */
+  display: flex;
 }
 
-.section3_steps .step_div{
+
+.section3_steps .step_div {
   padding: 40px 0 0 0;
 }
 
-.section3_steps p:first-child{
+.step_div h3{
+  font-size: 2rem;
+  font-weight: 700;
+  width: 160px;
+  color: #20B6F1;
+}
+
+.step_div_p1{
+  margin-top: 20px;
+  font-size: 1.4rem;
+  line-height: 21px;
+  word-spacing: 2px;
+  font-weight: 500;
+}
+
+.step_div_p2{
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.step:last-child h3 {
+  width: 220px;
+  white-space: pre-line;
+}
+
+.section3_steps p:first-child {
   font-size: 1.4rem;
   font-weight: 900;
   line-height: 21px;
   letter-spacing: 1px;
-  color: #4388FF;
-  margin-left: 10%;
+  color: #4388ff;
+  position: relative;
+  right: 57%;
 }
 
-.section3_steps img{
-  width: 25%;
-  margin: 0 0 0 10%;
-}
-
-.step_div{
-  display: flex;
-}
-
-.section3_steps .step_div_2{
+.section3_steps .step_div_2 {
   padding: 0;
 }
 
-.step_div_2{
+.step_div_2 {
   margin-left: 8%;
 }
 
-.step_div_2 h3{
+.step_div_2 h3 {
   font-size: 2rem;
-  color: #20B6F1;
+  color: #20b6f1;
   font-weight: bold;
   width: 80%;
 }
 
-.step:last-child .step_div_2 h3{
+.step:last-child .step_div_2 h3 {
   width: 100%;
 }
 
-.step_div_2 p{
+.step_div_2 p {
   font-size: 1.4rem;
   margin-top: 20px;
   line-height: 21px;
@@ -624,7 +680,7 @@ section3
   font-weight: 500;
 }
 
-.step_div_2 p:last-child{
+.step_div_2 p:last-child {
   font-size: 1rem;
   line-height: 150%;
   letter-spacing: 0.5px;
@@ -681,6 +737,8 @@ section4
   border-top-right-radius: 183px 67px;
 
 }
+
+
 
 .rood1 img:first-child,.rood1 img:nth-child(2),.rood1 img:nth-child(3),.rood1 img:nth-child(4){
   position: absolute;
@@ -923,6 +981,19 @@ border-right: 2px solid #FF4C00;
 transform: rotate(45deg);
 }
 
+.animatedImage {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s, transform 1s;
+}
+
+.animatedImage.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
 .rood2{
   position: relative;
 }
@@ -940,7 +1011,7 @@ transform: rotate(45deg);
   left: 70%;
 }
 
-.store:nth-last-child(2),.store:last-child{
+.quest:nth-last-child(2) .store,.quest:last-child .store{
   display: none;
 }
 
@@ -969,8 +1040,9 @@ transform: rotate(45deg);
 }
 
 .rood4 img:first-child{
-	width: 120%;
-  margin-left: -12%;
+	position: relative;
+  width: 393px;
+  left: -40px;
 }
 
 .rood4 img:nth-child(2){
@@ -1021,6 +1093,7 @@ footer
 
 .footer_div p{
   margin-top: 15px;
+  
 }
 
 .footer__button{
