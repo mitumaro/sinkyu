@@ -2,6 +2,7 @@ import { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PropTypes from "prop-types";
+import mappupin from "../../assets/img/mappupin.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -117,7 +118,7 @@ const Quest = ({
       <img className="questImg" src={imgSrc} alt={alt} />
       <div className="questContents">
         <div className="questTitle">
-          <img className="mapPin" src="img/mappupin.png" alt="マップピン" />
+          <img className="mapPin" src={mappupin} alt="マップピン" />
           <h2>{title}</h2>
         </div>
         <p className="questNumber">クエスト{questNumber}</p>
