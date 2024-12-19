@@ -1,4 +1,6 @@
 import "../index.css";
+import kamakuramannjyuu from "../assets/img/kamakuramannjyuu.png";
+import rekisiarutabemono from "../assets/img/rekisiarutabemono.png";
 
 const Section2 = () => (
   <section id="section2" className="section2">
@@ -34,12 +36,12 @@ const Section2 = () => (
       <div className="section2_div2_div">
         <img
           className="section2_div2_div_img1"
-          src="img/kamakuramannjyuu.png"
+          src={kamakuramannjyuu}
           alt="鎌倉まんじゅう"
         />
         <img
           className="section2_div2_div_img2"
-          src="img/rekisiarutabemono.png"
+          src={rekisiarutabemono}
           alt="歴史ある食べ物"
         />
       </div>

@@ -83,7 +83,7 @@ nav {
     right: -100%;
     bottom: 0;
     width: 393px;
-    background-image: url(../img/tyousouji.png);
+    background-image: url(./assets/img/tyousouji.png);
     background-size: cover;
     overflow-x: hidden;
     overflow-y: auto;

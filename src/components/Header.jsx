@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../index.css"; // Ensure the CSS file path is correct.
+import logo from "../assets/img/logo.png";
 
 const Header = () => {
   const handleClick = () => {
@@ -51,7 +52,7 @@ const Header = () => {
 
   return (
     <header id="header">
-      <img className="header_logo" src="../img/logo.png" alt="ロゴ" />
+      <img className="header_logo" src={logo} alt="ロゴ" />
       <p className="header_p">TripQuest</p>
       <div id="navArea" className={isOpen ? "open" : ""}>
         <nav>

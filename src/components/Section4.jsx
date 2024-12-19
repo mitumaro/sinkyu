@@ -1,6 +1,21 @@
 import Quest from "./SectionComponents/Quest";
 import "../index.css";
 import ScrollUpImage1 from "./SectionComponents/ScrollUpImage1";
+import kamakurajyuuouiwa from "../assets/img/kamakurajyuuouiwa.png";
+import zeniaraibenzaiten from "../assets/img/zeniaraibenzaiten.png";
+import kamakuranodaibutu from "../assets/img/kamakuranodaibutu.png";
+import miti2 from "../assets/img/miti2.png";
+import miti3 from "../assets/img/miti3.png";
+import miti4 from "../assets/img/miti4.png";
+import asiato2 from "../assets/img/asiato2.png";
+import asiato3 from "../assets/img/asiato3.png";
+import asiato4 from "../assets/img/asiato4.png";
+import anmitu from "../assets/img/anmitu.png";
+import kenntyouji from "../assets/img/kenntyouji.png";
+import sirasudon from "../assets/img/sirasudon.png";
+import ajisai from "../assets/img/ajisai.png";
+import komatidouri from "../assets/img/komatidouri.png";
+import turugaokahatimanguu_masuku from "../assets/img/turugaokahatimanguu_masuku.png";
 
 const Section4 = () => (
   <section id="section4" className="section4_quests">
@@ -32,7 +47,7 @@ const Section4 = () => (
 この声により、敵も愚か日々の雑念やストレスを
 吹き飛ばし自分の心の開放を
 鼓舞するはず！"
-      imgSrc="img/kamakurajyuuouiwa.png"
+      imgSrc={kamakurajyuuouiwa}
       alt="鎌倉十王岩の展望"
       buttonText="このクエストに参加する"
       discountCoupon="特別クーポン"
@@ -57,14 +72,14 @@ const Section4 = () => (
       roodName="rood2"
       roodClass="roodClass2"
       StoreSite="対象店舗はこちら"
-      roodImg="img/miti2.png"
+      roodImg={miti2}
       roodImgAlt="道２"
       rood_foot_2="rood_foot_2"
-      roodFootSrc="img/asiato2.png"
+      roodFootSrc={asiato2}
       roodFootAlt="足跡２"
-      img2="img/kamakuranodaibutu.png"
+      img2={kamakuranodaibutu}
       img2Alt="鎌倉の大仏"
-      img3="img/anmitu.png"
+      img3={anmitu}
       img3Alt="あんみつ"
       animationConfig={{
         direction: "left",
@@ -88,7 +103,7 @@ const Section4 = () => (
       description="日本最古の禅宗寺院では、歴史ある文化が色濃く残されているらしい特に古くから食べられていた物は禅僧たちが修行の一環として取り入れてきたものできっと
 心の静けさをくれるだろう。
 最古の精神料理を通して直に歴史を感じろ！"
-      imgSrc="img/kenntyouji.png"
+      imgSrc={kenntyouji}
       alt="建長寺"
       buttonText="このクエストに参加する"
       discountCoupon=""
@@ -97,14 +112,14 @@ const Section4 = () => (
       StoreSite=""
       roodName="rood3"
       roodClass="roodClass3"
-      roodImg="img/miti3.png"
+      roodImg={miti3}
       roodImgAlt="道３"
       rood_foot_2="rood_foot_3"
-      roodFootSrc="img/asiato3.png"
+      roodFootSrc={asiato3}
       roodFootAlt="足跡3"
-      img2="img/sirasudon.png"
+      img2={sirasudon}
       img2Alt="しらす丼"
-      img3="img/ajisai.png"
+      img3={ajisai}
       img3Alt="紫陽花"
       animationConfig={{
         direction: "right",
@@ -124,7 +139,7 @@ const Section4 = () => (
         </>
       }
       description="初夏の鎌倉、紫陽花が美しく咲き誇る季節。銭洗弁財天にある古い茶屋で旅の疲れを癒すべし、疲れが溜まった時の和菓子は至福のひととき"
-      imgSrc="img/zeniaraibenzaiten.png"
+      imgSrc={zeniaraibenzaiten}
       alt="銭洗弁財天"
       buttonText="このクエストに参加する"
       discountCoupon=""
@@ -133,14 +148,14 @@ const Section4 = () => (
       StoreSite=""
       roodName="rood4"
       roodClass="roodClass4"
-      roodImg="img/miti4.png"
+      roodImg={miti4}
       roodImgAlt="道４"
       rood_foot_2="rood_foot_4"
-      roodFootSrc="img/asiato4.png"
+      roodFootSrc={asiato4}
       roodFootAlt="足跡4"
-      img2="img/komatidouri.png"
+      img2={komatidouri}
       img2Alt="小町通"
-      img3="img/turugaokahatimanguu_masuku.png"
+      img3={turugaokahatimanguu_masuku}
       img3Alt="鶴岡八幡宮"
       animationConfig={{
         direction: "up",

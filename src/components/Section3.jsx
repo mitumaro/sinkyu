@@ -2,6 +2,13 @@ import { useEffect, useRef } from "react";
 import Step from "./SectionComponents/Step";
 import "../index.css";
 import MyComponent from "./SectionComponents/MyComponent.jsx";
+import tabisyasinn1 from "../assets/img/tabisyasinn1.png";
+import tabisyasinn2 from "../assets/img/tabisyasinn2.png";
+import tabisyasinn3 from "../assets/img/tabisyasinn3.png";
+import sumaho1 from "../assets/img/sumaho1.png";
+import sumaho2 from "../assets/img/sumaho2.png";
+import sumaho3 from "../assets/img/sumaho3.png";
+import sumaho4 from "../assets/img/sumaho4.png";
 
 const Section3 = () => {
   const scrollRef = useRef(null);
@@ -53,13 +60,13 @@ const Section3 = () => {
         <div className="section3_images" ref={scrollRef}>
           <div className="section3_images_inner">
             {/* 元の画像 */}
-            <img src="img/tabisyasinn1.png" alt="旅をしている人1" />
-            <img src="img/tabisyasinn2.png" alt="旅をしている人2" />
-            <img src="img/tabisyasinn3.png" alt="旅をしている人3" />
+            <img src={tabisyasinn1} alt="旅をしている人1" />
+            <img src={tabisyasinn2} alt="旅をしている人2" />
+            <img src={tabisyasinn3} alt="旅をしている人3" />
             {/* クローン画像 */}
-            <img src="img/tabisyasinn1.png" alt="旅をしている人1" />
-            <img src="img/tabisyasinn2.png" alt="旅をしている人2" />
-            <img src="img/tabisyasinn3.png" alt="旅をしている人3" />
+            <img src={tabisyasinn1} alt="旅をしている人1" />
+            <img src={tabisyasinn2} alt="旅をしている人2" />
+            <img src={tabisyasinn3} alt="旅をしている人3" />
           </div>
         </div>
         <h2>
@@ -76,32 +83,16 @@ const Section3 = () => {
           <div className="figure_section3_steps">
             <ul className="section3_steps_imgs">
               <li className="section3_steps_li">
-                <img
-                  className="section3_steps_img"
-                  src="img/sumaho1.png"
-                  alt=""
-                />
+                <img className="section3_steps_img" src={sumaho1} alt="" />
               </li>
               <li className="section3_steps_li">
-                <img
-                  className="section3_steps_img"
-                  src="img/sumaho2.png"
-                  alt=""
-                />
+                <img className="section3_steps_img" src={sumaho2} alt="" />
               </li>
               <li className="section3_steps_li">
-                <img
-                  className="section3_steps_img"
-                  src="img/sumaho3.png"
-                  alt=""
-                />
+                <img className="section3_steps_img" src={sumaho3} alt="" />
               </li>
               <li className="section3_steps_li">
-                <img
-                  className="section3_steps_img"
-                  src="img/sumaho4.png"
-                  alt=""
-                />
+                <img className="section3_steps_img" src={sumaho4} alt="" />
               </li>
             </ul>
           </div>

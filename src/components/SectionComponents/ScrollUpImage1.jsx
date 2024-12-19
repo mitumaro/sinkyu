@@ -1,6 +1,11 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useEffect, useState, useCallback } from "react";
+import nohara from "../../assets/img/nohara.png";
+import miti from "../../assets/img/miti.png";
+import asiato1 from "../../assets/img/asiato1.png";
+import menntikatu from "../../assets/img/menntikatu.png";
+import takebayasi from "../../assets/img/takebayasi.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,26 +92,16 @@ const ScrollUpImage1 = () => {
 
   return (
     <div ref={containerRef} className="rood1">
-      <img src="img/nohara.png" alt="野原のイラスト" className="scroll_up" />
+      <img src={nohara} alt="野原のイラスト" className="scroll_up" />
+      <img ref={imageRef} src={miti} alt="道１" className="scroll_up delay" />
+      <img ref={second} className="rood1_foot" src={asiato1} alt="足跡２" />
       <img
-        ref={imageRef}
-        src="img/miti.png"
-        alt="道１"
-        className="scroll_up delay"
-      />
-      <img
-        ref={second}
-        className="rood1_foot"
-        src="img/asiato1.png"
-        alt="足跡２"
-      />
-      <img
-        src="img/menntikatu.png"
+        src={menntikatu}
         alt="メンチカツ"
         className={`animatedImage ${isVisibleForImg2 ? "visible" : ""}`}
       />
       <img
-        src="img/takebayasi.png"
+        src={takebayasi}
         alt="竹藪"
         className={`animatedImage ${isVisibleForImg3 ? "visible" : ""}`}
       />
