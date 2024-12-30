@@ -41,7 +41,7 @@ h2{
     font-weight: bolder;
     text-align: center;
     letter-spacing: 1px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 /*=======
@@ -58,15 +58,13 @@ header
 .header_logo{
     width: 104px;
     height: 46px;
-    margin-left: 3%;
-    margin-top: 8px;
+    margin: auto 0 auto 1%;
 }
 
 .header_p{
     font-size: 2.4rem;
     font-weight: bold;
-    margin-top: 14px;
-    margin-left: 4%;
+    margin: auto 0 auto 2.5%;
 }
 
 #header .QuestChild{
@@ -202,8 +200,9 @@ nav {
   .toggle_btn {
     display: block;
     position: fixed;
-    top: 19px;
-    right: 12px;
+    top: 15px;
+    bottom: 0;
+    right: 10px;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -270,6 +269,7 @@ nav {
 
   .section1 {
     position: relative;
+    overflow: hidden;
   }
   
   .rotating-h1 {
@@ -299,7 +299,7 @@ nav {
   
   @keyframes rotating-h1 {
     0% {
-      transform: rotate(0deg) scale(6) translateY(20px); /* 初期状態 */
+      transform: rotate(0deg) scale(100) translateY(20px); /* 初期状態 */
       opacity: 0; /* 透明 */
     }
     /**50% {
@@ -307,7 +307,7 @@ nav {
       opacity: 0.5; 
     }**/
     100% {
-      transform: rotate(1430deg) scale(1) translateY(0); /* 完全に回転 */
+      transform: rotate(2150deg) scale(1) translateY(0); /* 完全に回転 */
       opacity: 1; /* 完全に表示 */
     }
   }
@@ -451,15 +451,18 @@ section2
     color: #4388FF;
 }
 
+.section2_div1{
+  margin-bottom: 50px;
+}
+
 .section2_div1 p,.section2_div2 p{
     font-size: 1.6rem;
     text-align: center;
-    padding: 0 0 20px 0;
     line-height: 28.8px;
 }
 
 .section2_div2{
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: #4388FF;
     border-radius: 45px;
 }
@@ -473,7 +476,7 @@ section2
 }
 
 .section2_div2_div{
-    padding-top: 20px;
+    padding-top: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -501,8 +504,8 @@ section3
 }
 
 .section3_intro h2:last-child{
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .section3_intro h2{
@@ -513,12 +516,11 @@ section3
     font-size: 1.6rem;
     letter-spacing: 1px;
     text-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 /* 画像全体をラップするコンテナ */
 .section3_images {
-  padding: 20px 0;
   display: flex;
   overflow: hidden; /* コンテナ外の画像を非表示に */
   width: 100%;
@@ -613,7 +615,7 @@ section3
 
 
 .section3_steps .step_div {
-  padding: 40px 0 0 0;
+  padding: 20px 0 0 0;
 }
 
 .step_div h3{
