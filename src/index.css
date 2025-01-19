@@ -572,16 +572,13 @@ section3
 
 .step_sh{
   position: sticky;
-  margin-top: 60px;
-  top: calc(50vh - 99.275px);
-  width: 98.79px;
-  height: 198.55px;
+  top: calc(10vh);
   z-index: 12;
 }
 
 .figure_section3_steps {
-  width: 98.79px;
-  height: 198.55px;
+  width: 240px;
+  height: 480px;
   position: relative;
   overflow: hidden;
   z-index: 11;
@@ -594,8 +591,8 @@ section3
   left: 0px;
   list-style: none;
   transition: left 0.3s ease;
-  width: 98.79px;
-  height: 198.55px;
+  width: 240px;
+  height: 480px;
   padding: 0;
   margin: 0;
 }
@@ -614,45 +611,40 @@ section3
 }
 
 .step {
-  margin-left: 12%;
-}
-
-.step_sh{
-  margin-left: 10%;
+  height: 100svh;
+  position: relative;
 }
 
 
 
-.step:first-child {
-  padding-bottom: 40px;
-}
 
-.step:last-child {
-  padding-top: 40px;
-}
-
-.step:nth-child(2),
-.step:nth-child(3) {
-  padding: 40px 0;
-}
 
 .section3_steps {
   padding: 40px 0;
   border-radius: 45px;
   background-color: #eaeaea;
   position: relative; /* 親要素にrelativeを設定 */
-  display: flex;
 }
 
 
 .section3_steps .step_div {
-  padding: 20px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  max-width: 393px;
+  width: 100%;
+  height: 30vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.step_div{
+  text-align: center;
+  background-color: #000;
 }
 
 .step_div h3{
   font-size: 2rem;
   font-weight: 700;
-  width: 160px;
   color: #20B6F1;
 }
 
@@ -683,7 +675,7 @@ section3
   letter-spacing: 1px;
   color: #4388ff;
   position: relative;
-  right: 57%;
+  text-align: center;
 }
 
 .section3_steps .step_div_2 {
