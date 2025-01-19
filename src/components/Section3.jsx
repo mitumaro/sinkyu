@@ -48,14 +48,12 @@ const Section3 = () => {
           <br />
           充実したものに
         </h2>
-        <p>
-          知らない場所や知っている場所まで
-          <br />
-          旅をより楽しくしてくれるツールを
+        <p className="Advertising">
+          知らない場所や馴染みがある場所まで旅をより楽しくしてくれるツールを
           <br />
           紹介します！
         </p>
-        <h2>TripQuest</h2>
+        <h3>TripQuest</h3>
         {/* スクロールエリア */}
         <div className="section3_images" ref={scrollRef}>
           <div className="section3_images_inner">
@@ -69,15 +67,15 @@ const Section3 = () => {
             <img src={tabisyasinn3} alt="旅をしている人3" />
           </div>
         </div>
-        <h2>
-          簡単4ステップで
-          <br />
-          はじめよう！
-        </h2>
       </div>
 
       {/* セクション 2 */}
       <MyComponent />
+      <h2 style={{ marginBottom: 40 }}>
+        簡単4ステップで
+        <br />
+        はじめよう！
+      </h2>
       <div className="section3_steps">
         <div className="step_sh">
           <div className="figure_section3_steps">

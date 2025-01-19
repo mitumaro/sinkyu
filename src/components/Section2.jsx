@@ -10,12 +10,9 @@ const Section2 = () => (
         <br />
         鎌倉
       </h2>
-      <p>
+      <p className="Advertising">
         長い歴史ある建造物が多く見られる鎌倉市
-        <br />
-        自分が武士になったつもりで食を堪能する
-        <br />
-        旅してみてはいかがですか？
+        自分が武士になったつもりで食を堪能する 旅してみてはいかがですか？
       </p>
     </div>
     <div className="section2_div2">
@@ -24,7 +21,7 @@ const Section2 = () => (
         <br />
         感じてみよう
       </h2>
-      <p>
+      <p className="Advertising">
         歴史を感じる瞬間は建物が多いです。
         <br />
         ですが食べ物だって歴史があります。

@@ -41,7 +41,14 @@ h2{
     font-weight: bolder;
     text-align: center;
     letter-spacing: 1px;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
+    line-height: 27px;
+    color: #00A3FF;
+}
+
+.Advertising{
+  line-height: 25px;
+  font-weight: 400;
 }
 
 /*=======
@@ -358,6 +365,7 @@ nav {
     position: absolute;
     right: 3%;
     top: 434px;
+    border-radius: 10px;
   }
   
   .section1_button_p {
@@ -443,40 +451,32 @@ section2
 =======*/
 
 .section2{
-    padding: 20px 0 0 0;
-    margin-bottom: 60px;
+    padding: 35px 0 0 0;
+    margin-bottom: 65px;
 }
 
 .section2_div1 h2{
-    color: #4388FF;
+    color: #00A3FF;
+    line-height: 27px;
 }
 
 .section2_div1{
-  margin-bottom: 50px;
+  margin-bottom: 16px;
+  padding: 0 35px;
 }
 
 .section2_div1 p,.section2_div2 p{
     font-size: 1.6rem;
     text-align: center;
-    line-height: 28.8px;
 }
 
 .section2_div2{
-    padding: 10px 0;
-    background-color: #4388FF;
-    border-radius: 45px;
+    padding: 25px 0;
 }
 
-.section2_div2 h2{
-    color: #fff;
-}
-
-.section2_div2 p{
-    color: #FFF;
-}
 
 .section2_div2_div{
-    padding-top: 10px;
+    padding-top: 22px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -485,6 +485,7 @@ section2
 .section2_div2_div_img1,.section2_div2_div_img2{
     width: 156px;
     height: 99px;
+    border-radius: 10px;
 }
 
 .section2_div2_div_img1{
@@ -499,24 +500,41 @@ section2
 section3
 =======*/
 
+
 .section3_intro h2:first-child,.section3_intro h2:last-child{
-    color: #4388FF;
+    color: #FFF
+}
+
+.section3_intro h2:first-child{
+  margin-bottom: 10px;
 }
 
 .section3_intro h2:last-child{
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: 60px;
+  margin-bottom: 20px;
 }
 
 .section3_intro h2{
     color: #20B6F1;
+    margin-bottom: 20px;
 }
 
 .section3_intro p{
     font-size: 1.6rem;
     letter-spacing: 1px;
     text-align: center;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    width: 80%;
+    color: #FFF;
+}
+
+.section3 h3{
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 /* 画像全体をラップするコンテナ */
@@ -537,7 +555,20 @@ section3
   width: 30%; /* 各画像の幅 */
   object-fit: cover; /* 比率を保ったまま表示 */
   margin-right: 20px; /* 画像間のスペース */
+  border-radius: 10px;
 }
+
+.section3_intro{
+  margin-bottom: 80px;
+  background-color: #4388FF;
+  padding: 40px 0;
+  border-radius: 45px;
+}
+
+.section3 h2{
+  margin-bottom: 20px;
+}
+
 
 .step_sh{
   position: sticky;
@@ -693,6 +724,10 @@ section3
 section4
 =============*/
 
+.section4_quests{
+    margin-top: 100px;
+}
+
 .section4_quests p{
   text-align: center;
 }
@@ -704,9 +739,6 @@ section4
   color: #20B6F1;
 }
 
-.questsIntroduction{
-  margin-top: 60px;
-}
 
 .section4_quests h2{
   color: #00A3FF;
@@ -732,7 +764,8 @@ section4
   text-align: center;
   font-size: 2rem;
   font-weight: 700;
-  margin-top: 20px;
+  margin-top: 10px;
+  padding: 0 8%;
 }
 
 .rood1{
@@ -789,18 +822,18 @@ section4
 
 .quest{
   background-color: #F5E8C7;
-  padding-bottom: 191px;
 }
 
 .questImg{
-  position: absolute;
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 20px;
 }
 
 .questContents{
   width: 80%;
   margin: 0 auto;
   position: relative;
-  top: 191px;
   background-color: #FFF;
   padding-bottom: 191px;
 }
@@ -826,23 +859,24 @@ section4
 
 
 .section4_quests .questStory{
-  width: 64%;
   text-align: left;
-  margin: 20px auto 0 auto;
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 21px;
   letter-spacing: 1px;
+  padding: 0 8%;
+  margin-top: 10px;
 }
 
 .questContents_button{
   width: 58%;
-  height: 4.4rem;
+  height: 5.4rem;
   display: flex;
   border: none;
   justify-content: start;
   background-color: #FF4C00;
-  margin: 20px auto 40px auto;
+  margin: 50px auto 40px auto;
+  border-radius: 10px;
 }
 
 .quest .questContents_button .questContents_p{
@@ -866,7 +900,7 @@ z-index: 6;
 .questContents_arrow::before,
 .questContents_arrow::after{
 position: absolute;
-top: 22px;
+top: 27px;
 bottom: 0;
 left: 0;
 margin: auto;
@@ -897,21 +931,23 @@ transform: rotate(45deg);
 
 .questContents .store .store_p {
   position: relative;
-  width: 60%;
-  padding: 3px 0;
+  width: 50%;
+  padding: 5px 0;
   background-color: #FF4C00;
   color: #FFF;
   margin: 0 auto;
   bottom: 18px;
   font-weight: 900;
+  border-radius: 10px;
 }
 
 .store{
-  width: 68%;
-  margin: 0 auto;
+  margin: 0 8%;
   background-color: #F5E8C7;
-  padding-bottom: 20px;
+  padding-bottom: 35px;
   margin-bottom: 40px;
+  margin-top: 30px;
+  border-radius: 20px;
 }
 
 .storeIntroduction p{
@@ -922,28 +958,28 @@ transform: rotate(45deg);
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 21px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #000;
-  bottom: 13px;
 }
 
 .storeIntroduction p:nth-child(2){
   font-size: 1.4rem;
   line-height: 21px;
+  font-weight: 700;
   color: #000;
-  bottom: 13px;
   margin-bottom: 17px;
 }
 
 .storeIntroduction_button{
   background-color: #FFF;
-  width: 77%;
-  height: 34px;
+  width: 63%;
+  height: 46px;
   display: flex;
   border: solid 1px;
   justify-content: start;
   margin:  0  auto;
   border-color: #FF4C00;
+  border-radius: 10px;
 }
 
 .quest .storeIntroduction_button .storeIntroduction_p{
@@ -951,7 +987,7 @@ transform: rotate(45deg);
   color: #FF4C00;
   font-weight: 900;
   margin: 0;
-  margin-top: 18px;
+  margin: auto 0;
   margin-left: 6%;
   font-size: 1.4rem;
 }
@@ -965,6 +1001,7 @@ vertical-align: middle;
 text-decoration: none;
 font-size: 15px;
 z-index: 6;
+top: 6px;
 }
 .storeIntroduction_arrow::before,
 .storeIntroduction_arrow::after{
@@ -1042,8 +1079,9 @@ transform: rotate(45deg);
 
 .rood_foot_3{
   position: absolute;
-  bottom: -34px;
-  left: 14%;
+  bottom: -5px;
+  left: 16%;
+  width: 58%;
 }
 
 .rood3 img:nth-child(3){
@@ -1108,12 +1146,14 @@ footer
   padding-top: 50px;
   margin-bottom: 25px;
   font-weight: 900;
+  color: #000;
 }
 
 .footer .footer__links{
-  border-top: solid 1px;
+  border-top: solid 2px;
   width: 80%;
   margin: 0 auto;
+  border-color: #F5E8D3;
 }
 
 .footer__links p{
@@ -1123,9 +1163,18 @@ footer
   letter-spacing: 4px;
 }
 
+.footer__links p::before {
+  content: "";
+  display: block; /* ブロック要素として扱う */
+  height: 2px; /* 線の高さ */
+  width: 100%; /* 線の幅 */
+  background-color: #F5E8D3; /* 線の色を指定 */
+  position: relative;
+  top: 38px;
+}
+
 .footer_div p{
   margin-top: 15px;
-  
 }
 
 .footer__button{
@@ -1137,6 +1186,7 @@ footer
   justify-content: start;
   margin:  40px  auto  0 auto;
   background-color: #FF4C00;
+  border-radius: 10px;
 }
 
 .footer .footer_p{
@@ -1148,6 +1198,10 @@ footer
   margin-left: 10%;
   font-size: 1.4rem;
   letter-spacing: 1px;
+}
+
+.footer .footer_p::before{
+  display: none;
 }
 
 .footer_arrow{

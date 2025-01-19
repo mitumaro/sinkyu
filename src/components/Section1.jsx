@@ -12,7 +12,7 @@ const Section1 = () => {
   return (
     <section className="section1">
       <div className="rotating-h1">
-        <h1 className="h1_1">TripTo</h1>
+        <h1 className="h1_1">Tripto</h1>
         <h1 className="h1_2">「食歴史」</h1>
         <h1 className="h1_3">新たな食と発見を求めて</h1>
       </div>

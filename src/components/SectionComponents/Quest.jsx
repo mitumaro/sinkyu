@@ -2,7 +2,7 @@ import { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PropTypes from "prop-types";
-import mappupin from "../../assets/img/mappupin.png";
+import mappupin from "../../assets/img/mappupin.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
