@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import sumaho1 from "../../assets/img/sumaho1.png";
 import sumaho2 from "../../assets/img/sumaho2.png";
 import sumaho3 from "../../assets/img/sumaho3.png";
@@ -35,32 +37,47 @@ function MyComponent() {
       } else {
         section3_steps_imgs.style.left = "0%";
       }
-
-      // // step_sh の位置をスクロールに応じて変更
-      // if (sectionRect.top <= 0 && sectionRect.bottom > vh * 1.05) {
-      //   if (step_sh) {
-      //     console.log("step_sh is now fixed");
-      //     step_sh.style.position = "fixed";
-      //     step_sh.style.top = "5%";
-      //     step_sh.style.left = "50%"; // 親要素が影響しないようにする
-      //     step_sh.style.transform = "translateX(-50%)";
-      //     step_sh.style.zIndex = "999"; // 必要に応じて z-index を追加
-      //   }
-      // } else {
-      //   if (step_sh) {
-      //     console.log("step_sh is now absolute");
-      //     step_sh.style.position = "absolute";
-      //     step_sh.style.top = "0%"; // absolute の場合、top をクリア
-      //     step_sh.style.left = ""; // left もクリア
-      //     step_sh.style.zIndex = ""; // z-index もリセット
-      //   }
-      // }
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // step_shの位置を変更する処理
+    ScrollTrigger.create({
+      markers: true,
+      trigger: ".section3_steps",
+      start: "top 100vh+=-100px", // section3_stepsの100vh地点で固定
+      end: "bottom 400vh+=516vh", // section3_stepsの400vh地点でabsolute
+      toggleClass: {
+        targets: ".step_sh",
+        className: "fixed-position",
+      },
+    });
+
+    // スクロール終了時にstep_endクラスを追加
+    ScrollTrigger.create({
+      markers: true,
+      trigger: ".section3_steps",
+      start: "bottom bottom", // 下端が画面下端に到達した時
+      end: "bottom bottom", // この位置でトリガー発動
+      onEnter: () => {
+        document.querySelector(".step_sh").classList.add("step_end");
+      },
+      onLeaveBack: () => {
+        document.querySelector(".step_sh").classList.remove("step_end");
+      },
+    });
+
+    // クリーンアップ処理
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // 全てのScrollTriggerインスタンスをkillする
     };
   }, []);
 

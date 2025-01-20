@@ -1,14 +1,10 @@
 import { useEffect, useRef } from "react";
 import Step from "./SectionComponents/Step";
 import "../index.css";
-import MyComponent from "./SectionComponents/MyComponent.jsx";
+import MyComponent from "./SectionComponents/MyComponent2.jsx";
 import tabisyasinn1 from "../assets/img/tabisyasinn1.png";
 import tabisyasinn2 from "../assets/img/tabisyasinn2.png";
 import tabisyasinn3 from "../assets/img/tabisyasinn3.png";
-import sumaho1 from "../assets/img/sumaho1.png";
-import sumaho2 from "../assets/img/sumaho2.png";
-import sumaho3 from "../assets/img/sumaho3.png";
-import sumaho4 from "../assets/img/sumaho4.png";
 
 const Section3 = () => {
   const scrollRef = useRef(null);
@@ -70,38 +66,21 @@ const Section3 = () => {
       </div>
 
       {/* セクション 2 */}
-      <MyComponent />
       <h2 style={{ marginBottom: 40 }}>
         簡単4ステップで
         <br />
         はじめよう！
       </h2>
       <div className="section3_steps">
-        <div className="step_sh">
-          <div className="figure_section3_steps">
-            <ul className="section3_steps_imgs">
-              <li className="section3_steps_li">
-                <img className="section3_steps_img" src={sumaho1} alt="" />
-              </li>
-              <li className="section3_steps_li">
-                <img className="section3_steps_img" src={sumaho2} alt="" />
-              </li>
-              <li className="section3_steps_li">
-                <img className="section3_steps_img" src={sumaho3} alt="" />
-              </li>
-              <li className="section3_steps_li">
-                <img className="section3_steps_img" src={sumaho4} alt="" />
-              </li>
-            </ul>
-          </div>
-        </div>
-
+        <MyComponent />
         <Step
           step="step1"
           title="気になるクエストを選んでみよう！"
           description={
             <>
-              自分の心に従うのがポイント！ 美味しいもの、面白いもの、
+              自分の心に従うのがポイント！
+              <br /> 美味しいもの、面白いもの、
+              <br />
               刺激があるもの、など どれを選ぶ？
             </>
           }

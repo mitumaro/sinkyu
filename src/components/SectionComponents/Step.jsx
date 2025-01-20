@@ -15,7 +15,6 @@ const Step = ({ step, title, description, note, index, totalSteps }) => {
     const isLastSection = index === totalSteps - 1; // 最後のセクションかどうかを判定
 
     ScrollTrigger.create({
-      markers: true,
       trigger: section,
       start: "bottom bottom",
       end: "bottom top",
@@ -23,7 +22,15 @@ const Step = ({ step, title, description, note, index, totalSteps }) => {
         if (!isLastSection) {
           gsap.set(inner, {
             position: "fixed",
-            bottom: 0,
+            bottom: -1,
+          });
+        }
+      },
+      onEnterBack: () => {
+        if (!isLastSection) {
+          gsap.set(inner, {
+            position: "fixed",
+            bottom: -1,
           });
         }
       },
@@ -48,8 +55,8 @@ const Step = ({ step, title, description, note, index, totalSteps }) => {
 
   return (
     <div ref={sectionRef} className="step">
-      <p>{step}</p>
       <div ref={innerRef} className="step_div">
+        <p>{step}</p>
         <h3 className="step_div_h3">{title}</h3>
         <p className="step_div_p1">{description}</p>
         <p className="step_div_p2">{note}</p>

@@ -531,7 +531,7 @@ section3
 
 .section3 h3{
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 1.6rem;
   text-align: center;
   color: #fff;
   margin-bottom: 20px;
@@ -571,14 +571,26 @@ section3
 
 
 .step_sh{
-  position: sticky;
-  top: calc(10vh);
+  position: absolute;
+  width: 30vh;
+  height: 60vh;
   z-index: 12;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.fixed-position{
+  position: fixed;
+  top: 2%;
+}
+
+.step_end{
+  top: 310vh;
 }
 
 .figure_section3_steps {
-  width: 240px;
-  height: 480px;
+  width: 30vh;
+  height: 60vh;
   position: relative;
   overflow: hidden;
   z-index: 11;
@@ -591,8 +603,8 @@ section3
   left: 0px;
   list-style: none;
   transition: left 0.3s ease;
-  width: 240px;
-  height: 480px;
+  width: 30vh;
+  height: 60vh;
   padding: 0;
   margin: 0;
 }
@@ -620,7 +632,7 @@ section3
 
 
 .section3_steps {
-  padding: 40px 0;
+  padding-top: 40px;
   border-radius: 45px;
   background-color: #eaeaea;
   position: relative; /* 親要素にrelativeを設定 */
@@ -639,13 +651,25 @@ section3
 
 .step_div{
   text-align: center;
-  background-color: #000;
+  color: #FFFFFF;
+}
+.step:nth-child(2) .step_div{
+  background-color: #00A3FF;
+}
+.step:nth-child(3) .step_div{
+  background-color: #169AFF;
+}
+.step:nth-child(4) .step_div{
+  background-color: #2D91FF;
+}
+.step:nth-child(5) .step_div{
+  background-color: #4388FF;
 }
 
 .step_div h3{
   font-size: 2rem;
   font-weight: 700;
-  color: #20B6F1;
+  margin-top: 7px;
 }
 
 .step_div_p1{
@@ -663,19 +687,15 @@ section3
   margin-top: 10px;
 }
 
-.step:last-child h3 {
-  width: 220px;
-  white-space: pre-line;
-}
 
 .section3_steps p:first-child {
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 900;
   line-height: 21px;
   letter-spacing: 1px;
-  color: #4388ff;
   position: relative;
   text-align: center;
+  margin-top: 30px;
 }
 
 .section3_steps .step_div_2 {
