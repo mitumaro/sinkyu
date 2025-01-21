@@ -63,7 +63,6 @@ function MyComponent() {
 
     // スクロール終了時にstep_endクラスを追加
     ScrollTrigger.create({
-      markers: true,
       trigger: ".section3_steps",
       start: "bottom bottom", // 下端が画面下端に到達した時
       end: "bottom bottom", // この位置でトリガー発動
