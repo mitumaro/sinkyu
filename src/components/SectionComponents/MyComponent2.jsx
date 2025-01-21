@@ -51,9 +51,10 @@ function MyComponent() {
 
     // step_shの位置を変更する処理
     ScrollTrigger.create({
+      markers: true,
       trigger: ".section3_steps",
-      start: "top 100vh+=-100px", // section3_stepsの100vh地点で固定
-      end: "bottom 400vh+=516vh", // section3_stepsの400vh地点でabsolute
+      start: "top top", // section3_stepsの100vh地点で固定
+      end: "bottom bottom", // section3_stepsの400vh地点でabsolute
       toggleClass: {
         targets: ".step_sh",
         className: "fixed-position",

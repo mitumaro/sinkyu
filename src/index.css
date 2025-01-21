@@ -78,6 +78,10 @@ header
   font-size: 2rem;
 }
 
+#header .QuestChild::before{
+  top: 35px;
+}
+
 /*============
 nav
 =============*/
@@ -87,7 +91,7 @@ nav {
     top: 0;
     right: -100%;
     bottom: 0;
-    width: 393px;
+    width: 100%;
     background-image: url(./assets/img/tyousouji.png);
     background-size: cover;
     overflow-x: hidden;
@@ -103,6 +107,7 @@ nav {
   }
   nav .inner {
     padding-left: 40px;
+    margin-top: 100px;
   }
   nav .inner ul {
     list-style: none;
@@ -122,9 +127,16 @@ nav {
     font-weight: 500;
   }
 
-  nav .inner ul li:first-child{
-    margin-top: 100px;
-  }
+  nav .inner ul li a::before{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 87%;
+    background-color: #F5E8D3;
+    opacity: 0.5;
+    position: relative;
+    top: 45px;
+}
 
   nav .inner ul li:nth-child(4){
     margin-bottom: 15px;
@@ -144,6 +156,13 @@ nav {
     justify-content: start;
     margin:  100px  auto  0 auto;
     background-color: #FF4C00;
+    position: relative;
+    border-radius: 10px;
+  }
+
+  .nav_button_Box{
+    display: flex;
+    margin: auto;
   }
   
   nav .nav_p{
@@ -151,8 +170,6 @@ nav {
     color: #fff;
     font-weight: 900;
     margin: 0;
-    margin-top: 12px;
-    margin-left: 10%;
     font-size: 1.4rem;
     letter-spacing: 1px;
   }
@@ -166,6 +183,7 @@ nav {
   text-decoration: none;
   font-size: 15px;
   z-index: 19;
+  top: 50%;
   }
   .nav_arrow::before,
   .nav_arrow::after{
@@ -184,6 +202,7 @@ nav {
   width: 14px;
   height: 2px;
   background: #FFF;
+  top: 0;
   }
   
   .nav_arrow::after{
@@ -194,6 +213,7 @@ nav {
   border-right: 2px solid #fff;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+  top: 0;
   }
 
   nav .inner ul li a:hover {
@@ -236,7 +256,7 @@ nav {
     bottom: 4px;
   }
   .open .toggle_btn span {
-    background-color: #4388FF;
+    background-color: #FF4C00;
   }
   .open .toggle_btn span:nth-child(1) {
     -webkit-transform: translateY(10px) rotate(-315deg);
@@ -577,15 +597,16 @@ section3
   z-index: 12;
   left: 50%;
   transform: translateX(-50%);
+  top: 1.5%;
 }
 
 .fixed-position{
   position: fixed;
-  top: 2%;
+  top: 5%;
 }
 
 .step_end{
-  top: 310vh;
+  top: 309vh;
 }
 
 .figure_section3_steps {
@@ -645,8 +666,6 @@ section3
   max-width: 393px;
   width: 100%;
   height: 30vh;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .step_div{
@@ -1162,10 +1181,10 @@ footer
 }
 
 .footer .footer__links{
-  border-top: solid 2px;
+  border-top: solid 2px rgba(245, 232, 211, 0.5);
   width: 80%;
   margin: 0 auto;
-  border-color: #F5E8D3;
+  
 }
 
 .footer__links p{
@@ -1181,8 +1200,14 @@ footer
   height: 2px; /* 線の高さ */
   width: 100%; /* 線の幅 */
   background-color: #F5E8D3; /* 線の色を指定 */
+  opacity: 0.5;
   position: relative;
   top: 38px;
+}
+
+.footer__button_box{
+  display: flex;
+  margin: auto;
 }
 
 .footer_div p{
@@ -1206,8 +1231,6 @@ footer
   color: #fff;
   font-weight: 900;
   margin: 0;
-  margin-top: 12px;
-  margin-left: 10%;
   font-size: 1.4rem;
   letter-spacing: 1px;
 }
@@ -1225,12 +1248,13 @@ vertical-align: middle;
 text-decoration: none;
 font-size: 15px;
 z-index: 6;
+top: 50%;
 }
 .footer_arrow::before,
 .footer_arrow::after{
 position: absolute;
-top: 23px;
 bottom: 0;
+top: 0;
 left: 0;
 margin: auto;
 content: "";
@@ -1253,10 +1277,80 @@ border-top: 2px solid #FFF;
 border-right: 2px solid #fff;
 -webkit-transform: rotate(45deg);
 transform: rotate(45deg);
+top: 0;
 }
 
-@media screen and (max-width: 959px) {
+@media (min-width: 769px) and (max-width: 1439px) {
+  .contents{
+    max-width: 100%;
+    margin: auto;
+    height: 100vh;
+  }
+  .contents_Box{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+  }
 
+  #header{
+    width: calc(100% - 60%);
+    position: sticky;
+    height: 100vh;
+    display: block;
+    top: 0;
+  }
+
+  nav .inner{
+    margin-top: 30vh;
+  }
+
+  .header_logo{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .header_p{
+    display: none;
+  }
+
+  .main_Box{
+    width: 393px;
+    margin: 0 auto;
+  }
+
+  #navArea{
+    height: 100vh;
+  }
+
+  .toggle_btn{
+    display: none;
+  }
+
+  nav{
+    position: static;
+    transform: none;
+    transition: 0.7s ease-in-out;
+    height: 100vh;
+  }
+
+  .fixed-position {
+    left: 70%;
+    }
+
+    .footer__links{
+      text-align: center;
+    }
+
+    .footer .footer__links{
+      width: 35%;
+    }
+
+    .footer .footer_p{
+      margin: 0;
+    }
+  
 }
 
 

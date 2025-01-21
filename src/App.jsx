@@ -9,11 +9,15 @@ import "./index.css";
 const App = () => (
   <>
     <div className="contents">
-      <Header />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
+      <div className="contents_Box">
+        <Header />
+        <div className="main_Box">
+          <Section1 />
+          <Section2 />
+          <Section3 />
+          <Section4 />
+        </div>
+      </div>
       <Footer />
     </div>
     {/* 他のセクションも同様に追加 */}

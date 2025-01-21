@@ -88,8 +88,10 @@ const Header = () => {
             </ul>
           </div>
           <button onClick={handleClick} className="nav_button">
-            <p className="nav_p">一人旅を体験する</p>
-            <a className="nav_arrow"></a>
+            <div className="nav_button_Box">
+              <p className="nav_p">一人旅を体験する</p>
+              <a className="nav_arrow"></a>
+            </div>
           </button>
         </nav>
         <div className="toggle_btn" onClick={toggleMenu}>

@@ -49,8 +49,10 @@ const Footer = () => {
         </div>
 
         <button onClick={handleClick} className="footer__button">
-          <p className="footer_p">一人旅を体験する</p>
-          <a className="footer_arrow"></a>
+          <div className="footer__button_box">
+            <p className="footer_p">一人旅を体験する</p>
+            <a className="footer_arrow"></a>
+          </div>
         </button>
       </div>
     </footer>
