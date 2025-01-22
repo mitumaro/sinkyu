@@ -23,6 +23,14 @@ const Section1 = () => {
         <p className="section1_button_p">一人旅を体験する</p>
         <a className="section1_button_a_arrow"></a>
       </button>
+      <div className="container_Box">
+        <div className="container">
+          <div className="chevron"></div>
+          <div className="chevron"></div>
+          <div className="chevron"></div>
+          <span className="container_text">Scroll down</span>
+        </div>
+      </div>
       <div className="section1_img">
         <img className="section1_img2" src={shrineRod} alt="鶴岡八幡宮" />
         <img className="section1_img3" src={hill} alt="丘のデザイン" />

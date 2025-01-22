@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../index.css"; // Ensure the CSS file path is correct.
-import logo from "../assets/img/rogo.svg";
+import logo from "../assets/img/logo.svg";
 
 const Header = () => {
   const handleClick = () => {

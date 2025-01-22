@@ -49,7 +49,7 @@ const Section3 = () => {
           <br />
           紹介します！
         </p>
-        <h3>TripQuest</h3>
+        <h2>TripQuest</h2>
         {/* スクロールエリア */}
         <div className="section3_images" ref={scrollRef}>
           <div className="section3_images_inner">
