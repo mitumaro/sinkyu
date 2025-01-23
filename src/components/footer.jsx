@@ -54,6 +54,7 @@ const Footer = () => {
             <a className="footer_arrow"></a>
           </div>
         </button>
+        <p className="copyright">©︎ TripQuest</p>
       </div>
     </footer>
   );
