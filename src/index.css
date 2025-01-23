@@ -69,6 +69,10 @@ h2{
   display: none;
 }
 
+button{
+  cursor: pointer;
+}
+
 /*=======
 header
 ========*/
@@ -1337,6 +1341,10 @@ footer
 .footer{
   background-color: #D9B574;
   padding-bottom: 60px;
+}
+
+.footer p{
+  cursor: pointer;
 }
 
 .footer .footer__title{
