@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: 'TamanegiKaishoGeki';
+  src: url('./src/assets/font/玉ねぎ楷書激無料版v7改.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html {
     background: #FFF;
     color: #000;
@@ -330,7 +338,7 @@ nav {
   .rotating-h1 .h1_1,
   .rotating-h1 .h1_2,
   .rotating-h1 .h1_3,.section1_img1 {
-    font-family: "Tamanegi Kaisho Geki FreeVer 7";
+    font-family: 'TamanegiKaishoGeki', sans-serif;
     transform: rotate(350deg);
     opacity: 0; /* 初期状態で透明 */
     animation: rotating-h1 1.2s ease-out forwards;
@@ -931,7 +939,7 @@ section4
 
 .section4_quests h2{
   color: #00A3FF;
-  font-family: "Tamanegi Kaisho Geki FreeVer 7";
+  font-family: 'TamanegiKaishoGeki', sans-serif;
   font-weight: 400;
   margin-top: 20px;
 }
